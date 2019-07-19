@@ -1,4 +1,4 @@
-__pycache__/
+/flask_blog/__pycache__/
 .idea/
 
 # Environments
