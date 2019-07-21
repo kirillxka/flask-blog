@@ -1,5 +1,6 @@
 /flask_blog/__pycache__/
 .idea/
+/flask_blog/site.db
 
 # Environments
 venv/
