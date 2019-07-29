@@ -19,8 +19,14 @@ app.config['PASSWORD'] = os.environ.get('EMAIL_PASS')
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
-login_manager.login_view = 'login'
+login_manager.login_view = 'users.login'
 login_manager.login_message_category = 'info'
 mail = Mail(app)
 
-from flask_blog import routes
+from flask_blog.users.routes import users
+from flask_blog.posts.routes import posts
+from flask_blog.main.routes import main
+
+app.register_blueprint(users)
+app.register_blueprint(posts)
+app.register_blueprint(main)
